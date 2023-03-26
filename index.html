@@ -53,26 +53,41 @@
   
     <script>
         
-     function insert(num){
-          cal.field.value = cal.field.value + num
-          console.log(cal.field.value)
-     }
+// Nilai "cal" berasal dari form 
+// metode ini akan meinmpa data lama pada form 
 
-     function equal(){
-          //let result = cal.field.value 
-          cal.field.value = eval(cal.field.value)
-          // https://www.w3schools.com/jsref/jsref_eval.asp
-     }
+        function insert(num) {
+            cal.field.value = cal.field.value + num 
+            // Konsep nya seperti ini 
+            // halo = "halo " + "dunia"" 
+            // "halo dunia"
+        }
 
-     function clean(){ // untuk remove
-          cal.field.value = ""
-     }
+        function equal(){
+            cal.field.value = eval(cal.field.value)
+            // Akan dilakukan proses perhitungan secara paksa
+            // menggunakan module eval. String atau bukan akan tetap dihitung
+            // eval("20 + 10") 
+            // 30
+            // ref https://www.w3schools.com/jsref/jsref_eval.asp
+        }
 
-     function back(){ // untuk del
-          cal.field.value = cal.field.value.substring(0, cal.field.value.length -1)
-          // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_substring6
-          // index ke 0 hingga ${length} -1, contoh 0 ke 9
-     }
+        function clean() { // Fungsi hapus 
+            cal.field.value = ""
+        }
+
+        function back() {
+            cal.field.value = cal.field.value.substring(0, cal.field.value.length -1)
+
+        // Fungsi ini akan menghapus satu nilai "-1"
+        // Lalu kegunaan angka 0?
+            // ref: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_substring6
+        }
+
+
+
 </script>
+
+
 </body>
 </html>
