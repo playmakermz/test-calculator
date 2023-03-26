@@ -77,10 +77,12 @@
         }
 
         function back() {
-            cal.field.value = cal.field.value.substring(0, cal.field.value.length -1)
+            cal.field.value = cal.field.value.substring(-1, cal.field.value.length -1)
 
         // Fungsi ini akan menghapus satu nilai "-1"
-        // Lalu kegunaan angka 0?
+        // argument (1): -1 adalah untuk
+        // menghapus bagian sesuai dengan indexing array
+        // jika nilai adalah -1 maka string bagian akhir yang akan dihapus
             // ref: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_substring6
         }
 
@@ -91,3 +93,4 @@
 
 </body>
 </html>
+
